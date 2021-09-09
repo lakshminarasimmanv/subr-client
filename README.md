@@ -4,6 +4,7 @@ This Bash Script helps you to take incremental backups using TAR and encrypting 
 ## Install
 * Cone this repository anywhere and run the following commands from inside the subrc-client directory
 * `chmod +x install.sh`
+* `./install.sh`
 
 ## Usage
 * Run this from any directory to backup the entire directory
