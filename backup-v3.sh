@@ -65,6 +65,7 @@ LOG_FILE=$RSYNC_DIR/${DATE}.log
 function archiving() {
     echo "Creating tar.gz file using Tar command."
     tar  --exclude=".subrc" \
+	    --auto-compress \
             --create \
             --listed-incremental=${SNAR} \
             --file=${TAR} \
