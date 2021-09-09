@@ -113,3 +113,5 @@ archiving
 encryption
 rsyncing
 deletion
+
+echo "Success!!"
