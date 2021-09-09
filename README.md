@@ -1,5 +1,5 @@
 # Simple Unix Backup and Restore Client
-This Bash Script helps you to take incremental backups using TAR and encrypting it using GPG Key and sent to a remote machine to store the encrypted backup file, so no one can extract and read your contents.
+This Bash Script helps you to take incremental backups using TAR and encrypting it using GPG Key and sent to a remote machine using rsync to store the encrypted backup file, so no one can extract and read your contents.
 
 ## Install
 * Cone this repository anywhere and run the following commands from inside the subrc-client directory
