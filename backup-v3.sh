@@ -70,6 +70,7 @@ function archiving() {
             --file=${TAR} \
             -C ${CURRENT_DIR}/.. \
             $SOURCE_FILE
+    echo "Archiving and zipping completed."
 }
 
 # Function to encrypt the Tar file using gpg keys.
@@ -80,6 +81,7 @@ function encryption() {
         --armor \
         -r $RECIPIENT \
         $TAR
+    echo "Archive Encrypted."
 }
 
 # Function to rsync the encrypted file to a remote machine
@@ -91,6 +93,7 @@ function rsyncing(){
         --log-file=$LOG_FILE \
         ${BACKED_UP_SOURCE_FILE} \
         ${DESTINATION_USER}@${DESTINATION_IP}:${DESTINATION_LOCATION}
+    echo "Encrypted archive sent to remote machine."
 }
 
 # Function to Delete local backup files from the backup_point.
@@ -98,6 +101,8 @@ function rsyncing(){
 function deletion() {
     rm -rf \
         $BACKUP_DIR*
+    echo "Deleted Local Backup."
+
 }
 
 # Calling all the functions
