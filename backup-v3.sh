@@ -87,6 +87,7 @@ function encryption() {
 # Function to rsync the encrypted file to a remote machine
 
 function rsyncing(){
+    echo "Please enter password for the remote machine!"
     rsync -azh \
         --progress \
         --stats \
