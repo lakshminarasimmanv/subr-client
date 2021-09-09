@@ -1,5 +1,5 @@
 # Simple Unix Backup and Restore Client
-This Bash Script helps you take incremental backup and save it to a remote machine which is encrypted using your GPG Key, so no one can extract and read your contents.
+This Bash Script helps you to take incremental backups and save it to a remote machine which is encrypted using your GPG Key, so no one can extract and read your contents.
 
 ## Install
 * Cone this repository anywhere and run the following commands from inside the subrc-client directory
