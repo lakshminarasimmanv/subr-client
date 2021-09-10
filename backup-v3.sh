@@ -41,6 +41,7 @@ function folders() {
         touch $CONFIG_FILE
         echo "Creating ${CONFIG_FILE}..."
         read -p "Enter recipient email: " RECIPIENT && echo "RECIPIENT='$RECIPIENT'" >> $CONFIG_FILE
+	read -p "Enter password to unlock GPG key(NOTE! The password will be stored as plain text.): " PASSWORD && echo "PASSWORD='$PASSWORD'" >> $CONFIG_FILE
         read -p "Enter destination machine User name: " DESTINATION_USER && echo "DESTINATION_USER='$DESTINATION_USER'" >> $CONFIG_FILE
         read -p "Enter destination IP: " DESTINATION_IP && echo "DESTINATION_IP='$DESTINATION_IP'" >> $CONFIG_FILE
         read -p "Enter destination file path: " DESTINATION_LOCATION && echo "DESTINATION_LOCATION='$DESTINATION_LOCATION'" >> $CONFIG_FILE
@@ -78,6 +79,8 @@ function archiving() {
 
 function encryption() {
     gpg --encrypt \
+	--pinentry-mode loopback \
+	--passphrase=$PASSWORD \
         --sign \
         --armor \
         -r $RECIPIENT \
