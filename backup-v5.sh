@@ -3,7 +3,7 @@ set -e
 # Global Directiories
 
 CURRENT_DIR=$(pwd)
-BACKUP_DIR=$CURRENT_DIR/.subrc/backup-$(date +%Y-%m-%d)
+BACKUP_DIR=$CURRENT_DIR/.subrc/${PWD##*/}-$(date +%Y-%m-%d)
 RSYNC_DIR=$CURRENT_DIR/.subrc/rsync_logs/
 CONFIG_FILE=$CURRENT_DIR/.subrc/config
 
